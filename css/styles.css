@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --arena: #C8A96E;
+    --bordo: #6B2737;
+    --arena-claro: #F5EDD8;
+    --crema: #FAF6EE;
+    --madera: #3D2B1F;
+    --arena-medio: #D4B483;
+}
+
+/* Tipografía base */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--crema);
+    color: var(--madera);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+/* Marco decorativo con ::after — no expresable en Tailwind */
+.foto-marco {
+    position: relative;
+}
+
+.foto-marco::after {
+    content: '';
+    position: absolute;
+    inset: 16px;
+    border: 1px solid rgba(200, 169, 110, 0.5);
+    pointer-events: none;
+}
+
+/* Patrón de fondo en sección contacto */
+.contacto-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23C8A96E' fill-opacity='0.05'%3E%3Cpath d='M30 0l8.66 5v10L30 20l-8.66-5V5L30 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Hover en galería — Tailwind no escala hijos internos fácilmente */
+.galeria-item:hover .galeria-item-inner {
+    transform: scale(1.05);
+}

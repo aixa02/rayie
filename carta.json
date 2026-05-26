@@ -1,0 +1,434 @@
+{
+    "categorias": [
+        {
+            "id": "entradas",
+            "nombre": {
+                "es": "Entradas",
+                "en": "Starters"
+            },
+            "platos": [
+                {
+                    "id": "hummus",
+                    "nombre": {
+                        "es": "Hummus",
+                        "en": "Hummus"
+                    },
+                    "descripcion": {
+                        "es": "Pasta de garbanzos con tahín, limón y aceite de oliva",
+                        "en": "Chickpea paste with tahini, lemon and olive oil"
+                    },
+                    "precio": 7700,
+                    "veggie": true
+                },
+                {
+                    "id": "falafel",
+                    "nombre": {
+                        "es": "Falafel",
+                        "en": "Falafel"
+                    },
+                    "descripcion": {
+                        "es": "Croqueta de garbanzo frita. Por unidad",
+                        "en": "Fried chickpea croquette. Per unit"
+                    },
+                    "precio": 890,
+                    "veggie": true
+                },
+                {
+                    "id": "escabeche",
+                    "nombre": {
+                        "es": "Escabeche de berenjena",
+                        "en": "Pickled eggplant"
+                    },
+                    "descripcion": {
+                        "es": "Berenjenas en conserva casera, condimentadas con especias.",
+                        "en": "Pickled eggplant with spices"
+                    },
+                    "precio": 8800,
+                    "veggie": true
+                },
+                {
+                    "id": "baba-ganush",
+                    "nombre": {
+                        "es": "Baba Ganush",
+                        "en": "Baba Ganush"
+                    },
+                    "descripcion": {
+                        "es": "Puré de berenjena asada.",
+                        "en": "Roasted eggplant purée."
+                    },
+                    "precio": 7700,
+                    "veggie": true
+                },
+                {
+                    "id": "shanklish",
+                    "nombre": {
+                        "es": "Shanklish",
+                        "en": "Shanklish"
+                    },
+                    "descripcion": {
+                        "es": "Esferas de quesillo picante con especias.",
+                        "en": "Spicy strained cheese balls with spices."
+                    },
+                    "precio": 8000,
+                    "veggie": true
+                },
+                {
+                    "id": "laban",
+                    "nombre": {
+                        "es": "Laban",
+                        "en": "Laban"
+                    },
+                    "descripcion": {
+                        "es": "Cuajada o yogurt árabe.",
+                        "en": "Arabian yogurt."
+                    },
+                    "precio": 9000,
+                    "veggie": true
+                },
+                {
+                    "id": "tablita-degustación",
+                    "nombre": {
+                        "es": "Tablita degustación",
+                        "en": "Tasting platter"
+                    },
+                    "descripcion": {
+                        "es": "Trío de sabores tradicionales: hummus, tabule y escabeche de berenjenas.",
+                        "en": "Trio of traditional flavors: hummus, tabule and pickled eggplant."
+                    },
+                    "precio": 16000,
+                    "veggie": false
+                },
+                {
+                    "id": "pan-arabe",
+                    "nombre": {
+                        "es": "Pan Árabe",
+                        "en": "Arab Bread"
+                    },
+                    "precio": 300,
+                    "veggie": true
+                },
+                {
+                    "id": "pan-zaatar",
+                    "nombre": {
+                        "es": "Pan con za'atar",
+                        "en": "Bread with za'atar"
+                    },
+                    "precio": 500,
+                    "veggie": true
+                }
+            ]
+        },
+        {
+            "id": "platos-principales",
+            "nombre": {
+                "es": "Platos principales",
+                "en": "Main courses"
+            },
+            "platos": [
+                {
+                    "id": "sfijas",
+                    "nombre": {
+                        "es": "Sfijas",
+                        "en": "Sfijas"
+                    },
+                    "descripcion": {
+                        "es": "Empanadas árabes rellenas de carne molida vacuna, tomate y cebolla.",
+                        "en": "Arabian pastries filled with ground beef, tomato and onion."
+                    },
+                    "precio": {
+                        "salon": 2500,
+                        "llevar": 21000
+                    },
+                    "veggie": false
+                },
+                {
+                    "id": "sfijas-bisabanej",
+                    "nombre": {
+                        "es": "Sfijas Bi sabanej",
+                        "en": "Sfijas Bi sabanej"
+                    },
+                    "descripcion": {
+                        "es": "Empanadas de espinaca.",
+                        "en": "Spinach-filled pastries."
+                    },
+                    "precio": {
+                        "salon": 2500,
+                        "llevar": 21000
+                    },
+                    "veggie": true
+                },
+                {
+                    "id": "kepee",
+                    "nombre": {
+                        "es": "Kepee frito/horneado",
+                        "en": "Kepee fried/baked"
+                    },
+                    "descripcion": {
+                        "es": "Carne molida vacuna con trigo burgol y varias verduras procesadas. Relleno con carne y nueces o queso. (viene con papas rústicas)",
+                        "en": "Ground meat with bulgur wheat and various processed vegetables. Filled with meat and nuts or cheese. (comes with rustic potatoes)"
+                    },
+                    "precio": 22000,
+                    "veggie": false
+                },
+                {
+                    "id": "kepee-crudo",
+                    "nombre": {
+                        "es": "Kepee crudo",
+                        "en": "Kepee crudo"
+                    },
+                    "descripcion": {
+                        "es": "Carne molida vacuna con trigo burgol y varias verduras procesadas.",
+                        "en": "Ground meat with bulgur wheat and various processed vegetables."
+                    },
+                    "precio": 22000,
+                    "veggie": false
+                },
+                {
+                    "id": "kebab",
+                    "nombre": {
+                        "es": "Kebab",
+                        "en": "Kebab"
+                    },
+                    "descripcion": {
+                        "es": "Carne de cordero macerada junto a especias árabes. (viene con papas rústicas)",
+                        "en": "Lamb meat marinated with Arabic spices. (comes with rustic potatoes)"
+                    },
+                    "precio": 22000,
+                    "veggie": false
+                },
+                {
+                    "id": "niños",
+                    "nombre": {
+                        "es": "Niños envueltos",
+                        "en": "Warak inab"
+                    },
+                    "descripcion": {
+                        "es": "Hoja de parra rellena de carne molida y arroz.",
+                        "en": "Grape leaf stuffed with ground meat and rice."
+                    },
+                    "precio": 22000,
+                    "veggie": false
+                },
+                {
+                    "id": "tripa",
+                    "nombre": {
+                        "es": "Tripa rellena",
+                        "en": "Filled tripe"
+                    },
+                    "descripcion": {
+                        "es": "Tripa de cordero o vaca, rellena de arroz, carne y garbanzos.",
+                        "en": "Filled tripe with rice, meat, and chickpeas."
+                    },
+                    "precio": 22000,
+                    "veggie": false
+                },
+                {
+                    "id": "shawarma",
+                    "nombre": {
+                        "es": "Shawarma",
+                        "en": "Shawarma"
+                    },
+                    "descripcion": {
+                        "es": "Sandwich con carne de cordero macerada con tomate, zanahoria, pepino y salsa de yogurt.",
+                        "en": "Sandwich with marinated lamb meat and vegetables in yogurt sauce."
+                    },
+                    "precio": 18500,
+                    "veggie": false
+                },
+                {
+                    "id": "shawarma-vegetariano",
+                    "nombre": {
+                        "es": "Shawarma veggie",
+                        "en": "Shawarma veggie"
+                    },
+                    "descripcion": {
+                        "es": "Sandwich de falafel con tomate, zanahoria, pepino y salsa de yogurt. (opción vegana también)",
+                        "en": "Sandwich with falafel and vegetables in yogurt sauce. (vegan option also available)"
+                    },
+                    "precio": 17000,
+                    "veggie": true
+                },
+                {
+                    "id": "hamburguesa",
+                    "nombre": {
+                        "es": "Hamburguesa Rayie",
+                        "en": "Rayie's Burger"
+                    },
+                    "descripcion": {
+                        "es": "Pan árabe, medallón de cordero, cebolla y morrón caramelizado, queso, huevo y salsa de yogurt. (viene con papas rústicas)",
+                        "en": "Arab bread, lamb medallion, onion and caramelized pepper, cheese, egg and yogurt sauce. (comes with rustic potatoes)"
+                    },
+                    "precio": 16000,
+                    "veggie": false
+                },
+                {
+                    "id": "hamburguesa-vegetariana",
+                    "nombre": {
+                        "es": "Hamburguesa veggie",
+                        "en": "Veggie Burger"
+                    },
+                    "descripcion": {
+                        "es": "Pan árabe, medallón de falafel, cebolla y morrón caramelizado, queso, huevo y salsa de yogurt. (opción vegana también disponible) (viene con papas rústicas)",
+                        "en": "Arab bread, falafel medallion, onion and caramelized pepper, cheese, egg and yogurt sauce. (vegan option also available) (comes with rustic potatoes)"
+                    },
+                    "precio": 14000,
+                    "veggie": true
+                },
+                {
+                    "id": "pizza-cordero",
+                    "nombre": {
+                        "es": "Pizza de cordero",
+                        "en": "Lamb pizza"
+                    },
+                    "precio": 18000,
+                    "veggie": false
+                },
+                {
+                    "id": "pizza-roquefort",
+                    "nombre": {
+                        "es": "Pizza de roquefort, nueces y dátiles",
+                        "en": "Roquefort pizza with walnuts and dates"
+                    },
+                    "precio": 18000,
+                    "veggie": true
+                },
+                {
+                    "id": "pizza-escabeche",
+                    "nombre": {
+                        "es": "Pizza de escabeche de berenjena",
+                        "en": "Pickled eggplant pizza"
+                    },
+                    "precio": 17000,
+                    "veggie": true
+                },
+                {
+                    "id": "sinia",
+                    "nombre": {
+                        "es": "Sinia",
+                        "en": "Sinia"
+                    },
+                    "descripcion": {
+                        "es": "Selección de los platos más tradicionales de la cocina árabe. Valor para dos personas.",
+                        "en": "Selection of the most traditional dishes from Arabian cuisine. Serves two people."
+                    },
+                    "precio": 59000,
+                    "veggie": false
+                }
+            ]
+        },
+        {
+            "id": "guarniciones",
+            "nombre": {
+                "es": "Guarniciones",
+                "en": "Sides"
+            },
+            "platos": [
+                {
+                    "id": "papas-rusticas",
+                    "nombre": {
+                        "es": "Papas rústicas",
+                        "en": "Rustic potatoes"
+                    },
+                    "precio": 4500,
+                    "veggie": true
+                },
+                {
+                    "id": "tabule",
+                    "nombre": {
+                        "es": "Tabule",
+                        "en": "Tabbouleh"
+                    },
+                    "descripcion": {
+                        "es": "Ensalada de trigo burgol, tomate, cebolla, pepino, perejil y limón.",
+                        "en": "Salad with bulgur wheat, tomato, onion, cucumber, parsley and lemon."
+                    },
+                    "precio": 9800,
+                    "veggie": true
+                },
+                {
+                    "id": "berenjena-rellena",
+                    "nombre": {
+                        "es": "Berenjena rellena",
+                        "en": "Stuffed eggplant"
+                    },
+                    "descripcion": {
+                        "es": "Relleno de muzzarella, roquefort, panceta y tomate.",
+                        "en": "Stuffed eggplant with mozzarella, roquefort, bacon and tomato."
+                    },
+                    "precio": 9500,
+                    "veggie": false
+                },
+                {
+                    "id": "ensalada-berenjena",
+                    "nombre": {
+                        "es": "Ensalada de berenjena",
+                        "en": "Eggplant salad"
+                    },
+                    "descripcion": {
+                        "es": "Berenjena asada, tomate, aceitunas negras y perejil.",
+                        "en": "Grilled eggplant with tomato, black olives and parsley."
+                    },
+                    "precio": 8500,
+                    "veggie": true
+                }
+            ]
+        },
+        {
+            "id": "postres",
+            "nombre": {
+                "es": "Postres",
+                "en": "Desserts"
+            },
+            "platos": [
+                {
+                    "id": "baklava",
+                    "nombre": {
+                        "es": "Baklava",
+                        "en": "Baklava"
+                    },
+                    "descripcion": {
+                        "es": "Capas de masa filo con nueces y almíbar.",
+                        "en": "Layers of filo pastry with walnuts and syrup."
+                    },
+                    "precio": 6500,
+                    "veggie": true
+                },
+                {
+                    "id": "basbusa",
+                    "nombre": {
+                        "es": "Basbusa",
+                        "en": "Basbusa"
+                    },
+                    "descripcion": {
+                        "es": "Postre de sémola.",
+                        "en": "Semolina dessert"
+                    },
+                    "precio": 6000,
+                    "veggie": true
+                },
+                {
+                    "id": "datil",
+                    "nombre": {
+                        "es": "Bombón de dátil",
+                        "en": "Date Candy"
+                    },
+                    "descripcion": {
+                        "es": "Dátil relleno con nuez bañado en chocolate.",
+                        "en": "Date candy filled with walnuts and coated in chocolate."
+                    },
+                    "precio": 2200,
+                    "veggie": true
+                },
+                {
+                    "id": "cafe-turco",
+                    "nombre": {
+                        "es": "Café turco",
+                        "en": "Turkish coffee"
+                    },
+                    "precio": 6000,
+                    "veggie": true
+                }
+            ]
+        }
+    ]
+}
