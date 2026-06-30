@@ -29,6 +29,15 @@
     <script src="js/main.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23ET8MQVZB"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-23ET8MQVZB');
+</script>
 
 <body class="bg-crema text-madera overflow-x-hidden">
 
@@ -41,6 +50,12 @@
 
             <!-- Desktop menu -->
             <ul class="hidden md:flex gap-9 list-none">
+                <li>
+                    <a href="carta.html"
+                        class="text-arena-claro text-xs tracking-widest uppercase font-bold hover:text-arena transition-colors">
+                        Carta
+                    </a>
+                </li>
                 <li>
                     <a href="#nosotros"
                         class="text-arena-claro text-xs tracking-widest uppercase font-bold hover:text-arena transition-colors">
