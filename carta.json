@@ -262,19 +262,6 @@
                     "veggie": false
                 },
                 {
-                    "id": "hamburguesa-vegetariana",
-                    "nombre": {
-                        "es": "Hamburguesa veggie",
-                        "en": "Veggie Burger"
-                    },
-                    "descripcion": {
-                        "es": "Pan árabe, medallón de falafel, cebolla y morrón caramelizado, queso, huevo y salsa de yogurt. (opción vegana también disponible) (viene con papas rústicas)",
-                        "en": "Arab bread, falafel medallion, onion and caramelized pepper, cheese, egg and yogurt sauce. (vegan option also available) (comes with rustic potatoes)"
-                    },
-                    "precio": 14000,
-                    "veggie": true
-                },
-                {
                     "id": "pizza-cordero",
                     "nombre": {
                         "es": "Pizza de cordero",
