@@ -52,7 +52,7 @@
             <ul class="hidden md:flex gap-9 list-none">
                 <li>
                     <a href="carta.html"
-                        class="text-arena-claro text-xs tracking-widest uppercase font-bold hover:text-arena transition-colors">
+                        class="text-arena-claro text-xs tracking-widest uppercase bg-bordo font-bold hover:text-arena transition-colors p-2 rounded-md">
                         Carta
                     </a>
                 </li>
@@ -86,10 +86,14 @@
             </ul>
 
             <!-- Hamburger -->
-            <button @click="open = !open" class="md:hidden text-arena-claro" aria-label="Abrir menú">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+            <button @click="open = !open" class="md:hidden text-arena-claro" :aria-label="open ? 'Cerrar menú' : 'Abrir menú'">
+                <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
 
@@ -101,13 +105,20 @@
             x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
             x-transition:leave-end="opacity-0 -translate-y-4" class="md:hidden mt-6 overflow-hidden">
             <ul class="flex flex-col gap-5 list-none">
-                <li><a href="#nosotros"
-                        class="text-arena-claro text-xs tracking-widest uppercase font-bold">Nosotros</a></li>
-                <li><a href="#galeria" class="text-arena-claro text-xs tracking-widest uppercase font-bold">Galería</a>
+                <li>
+                    <a href="carta.html"
+                        class="text-arena-claro text-xs tracking-widest uppercase bg-bordo font-bold hover:text-arena transition-colors p-2 rounded-md">
+                        Carta
+                    </a>
                 </li>
-                <li><a href="#horarios"
+                <li><a href="index.html#nosotros"
+                        class="text-arena-claro text-xs tracking-widest uppercase font-bold">Nosotros</a></li>
+                <li><a href="index.html#galeria"
+                        class="text-arena-claro text-xs tracking-widest uppercase font-bold">Galería</a>
+                </li>
+                <li><a href="index.html#horarios"
                         class="text-arena-claro text-xs tracking-widest uppercase font-bold">Horarios</a></li>
-                <li><a href="#contacto"
+                <li><a href="index.html#contacto"
                         class="text-arena-claro text-xs tracking-widest uppercase font-bold">Contacto</a></li>
             </ul>
         </div>

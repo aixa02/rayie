@@ -14,17 +14,28 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('carta', () => ({
     carta: [],
     idioma: 'es',
+    categoriaFiltro: 'todas',
+    soloVeggie: false,
 
     async cargarCarta() {
       try {
         const response = await fetch('carta.json')
-        this.carta = await response.json()
-        this.carta = this.carta.categorias
-        
-        } catch (error) {
-          console.error('Error cargando carta:', error)
-        }
+        const data = await response.json()
+        this.carta = data.categorias
+      } catch (error) {
+        console.error('Error cargando carta:', error)
       }
+    },
+
+    get categoriasFiltradas() {
+      return this.carta
+        .filter(categoria => this.categoriaFiltro === 'todas' || categoria.id === this.categoriaFiltro)
+        .map(categoria => ({
+          ...categoria,
+          platos: categoria.platos.filter(plato => !this.soloVeggie || plato.veggie)
+        }))
+        .filter(categoria => categoria.platos.length > 0)
+    }
   }))
 })
 

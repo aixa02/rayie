@@ -20,6 +20,7 @@
                         'arena-claro': '#F5EDD8',
                         crema: '#FAF6EE',
                         madera: '#3D2B1F',
+                        'madera-claro': '#6B5645',
                         'arena-medio': '#D4B483',
                     }
                 }
@@ -42,39 +43,49 @@
             <!-- Desktop menu -->
             <ul class="hidden md:flex gap-9 list-none">
                 <li>
-                    <a href="#nosotros"
+                    <a href="carta.html"
+                        class="text-arena-claro text-xs tracking-widest uppercase bg-bordo font-bold hover:text-arena transition-colors p-2 rounded-md">
+                        Carta
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#nosotros"
                         class="text-arena-claro text-xs tracking-widest uppercase font-bold hover:text-arena transition-colors">
                         Nosotros
                     </a>
                 </li>
 
                 <li>
-                    <a href="#galeria"
+                    <a href="index.html#galeria"
                         class="text-arena-claro text-xs tracking-widest uppercase font-bold hover:text-arena transition-colors">
                         Galería
                     </a>
                 </li>
 
                 <li>
-                    <a href="#horarios"
+                    <a href="index.html#horarios"
                         class="text-arena-claro text-xs tracking-widest uppercase font-bold hover:text-arena transition-colors">
                         Horarios
                     </a>
                 </li>
 
                 <li>
-                    <a href="#contacto"
+                    <a href="index.html#contacto"
                         class="text-arena-claro text-xs tracking-widest uppercase font-bold hover:text-arena transition-colors">
                         Contacto
                     </a>
                 </li>
             </ul>
 
-            <!-- Hamburger -->
-            <button @click="open = !open" class="md:hidden text-arena-claro" aria-label="Abrir menú">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+
+            <button @click="open = !open" class="md:hidden text-arena-claro" :aria-label="open ? 'Cerrar menú' : 'Abrir menú'">
+                <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
 
@@ -86,13 +97,20 @@
             x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
             x-transition:leave-end="opacity-0 -translate-y-4" class="md:hidden mt-6 overflow-hidden">
             <ul class="flex flex-col gap-5 list-none">
-                <li><a href="#nosotros"
-                        class="text-arena-claro text-xs tracking-widest uppercase font-bold">Nosotros</a></li>
-                <li><a href="#galeria" class="text-arena-claro text-xs tracking-widest uppercase font-bold">Galería</a>
+                <li>
+                    <a href="carta.html"
+                        class="text-arena-claro text-xs tracking-widest uppercase bg-bordo font-bold hover:text-arena transition-colors p-2 rounded-md">
+                        Carta
+                    </a>
                 </li>
-                <li><a href="#horarios"
+                <li><a href="index.html#nosotros"
+                        class="text-arena-claro text-xs tracking-widest uppercase font-bold">Nosotros</a></li>
+                <li><a href="index.html#galeria"
+                        class="text-arena-claro text-xs tracking-widest uppercase font-bold">Galería</a>
+                </li>
+                <li><a href="index.html#horarios"
                         class="text-arena-claro text-xs tracking-widest uppercase font-bold">Horarios</a></li>
-                <li><a href="#contacto"
+                <li><a href="index.html#contacto"
                         class="text-arena-claro text-xs tracking-widest uppercase font-bold">Contacto</a></li>
             </ul>
         </div>
@@ -112,10 +130,42 @@
                 </button>
             </div>
 
+            <!-- Filtros -->
+            <div class="max-w-4xl mx-auto mb-10 flex flex-col items-center gap-4">
+                <div class="flex flex-wrap justify-center gap-2">
+                    <button @click="categoriaFiltro = 'todas'"
+                        :class="categoriaFiltro === 'todas' ? 'bg-bordo text-arena-claro' : 'bg-arena-claro text-madera'"
+                        class="px-4 py-1.5 text-xs uppercase tracking-widest font-bold transition-colors">
+                        <span x-text="idioma === 'es' ? 'Todas' : 'All'"></span>
+                    </button>
+                    <template x-for="categoria in carta" :key="categoria.id">
+                        <button @click="categoriaFiltro = categoria.id"
+                            :class="categoriaFiltro === categoria.id ? 'bg-bordo text-arena-claro' : 'bg-arena-claro text-madera'"
+                            class="px-4 py-1.5 text-xs uppercase tracking-widest font-bold transition-colors"
+                            x-text="categoria.nombre[idioma]">
+                        </button>
+                    </template>
+                </div>
+
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" x-model="soloVeggie" class="accent-bordo w-4 h-4">
+                    <span class="text-xs uppercase tracking-widest font-bold text-madera"
+                        x-text="idioma === 'es' ? 'Solo vegetariano' : 'Vegetarian only'"></span>
+                </label>
+            </div>
+
+            <!-- Sin resultados -->
+            <template x-if="categoriasFiltradas.length === 0">
+                <p class="text-center text-madera-claro"
+                    x-text="idioma === 'es' ? 'No hay platos que coincidan con el filtro.' : 'No dishes match this filter.'">
+                </p>
+            </template>
+
             <!-- Categorías -->
-            <template x-for="categoria in carta" :key="categoria.id">
+            <template x-for="categoria in categoriasFiltradas" :key="categoria.id">
                 <div class="max-w-4xl mx-auto mb-16">
-                    <h2 x-text="categoria.nombre[idioma]" class="text-madera mb-8 text-2xl md:text-3xl font-bold tracking-wide"
+                    <h2 x-text="categoria.nombre[idioma]"
+                        class="text-madera mb-8 text-2xl md:text-3xl font-bold tracking-wide"
                         style="font-family: 'Playfair Display'"></h2>
 
                     <!-- Platos de esa categoría -->
@@ -123,7 +173,8 @@
                         <template x-for="plato in categoria.platos" :key="plato.id">
                             <div class="border-b border-arena/30 pb-6">
                                 <div class="flex justify-between items-start mb-2">
-                                    <h3 x-text="plato.nombre[idioma]" class="text-madera text-lg font-semibold tracking-wide "></h3>
+                                    <h3 x-text="plato.nombre[idioma]"
+                                        class="text-madera text-lg font-semibold tracking-wide "></h3>
 
                                     <div class="text-bordo font-bold">
                                         <template x-if="typeof plato.precio === 'number'">
