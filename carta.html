@@ -173,9 +173,9 @@
                     <div class="grid gap-8">
                         <template x-for="plato in categoria.platos" :key="plato.id">
                             <div class="border-b border-arena/30 pb-6">
-                                <div class="flex justify-between items-start mb-2">
+                                <div class="flex justify-between items-start gap-1 mb-3">
                                     <h3 x-text="plato.nombre[idioma]"
-                                        class="text-madera text-lg font-semibold tracking-wide "></h3>
+                                        class="text-madera text-lg font-semibold tracking-wide text-pretty "></h3>
 
                                     <div class="text-bordo font-bold">
                                         <template x-if="typeof plato.precio === 'number'">
